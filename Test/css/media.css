@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+}
+
+#heading {
+    width: 100%;
+    height: 50px;
+}
+
+#heading h1 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+}
+
+#links {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+
+li {
+    padding-right: 10px;
+    display: block;
+    float: left;
+    color: white;
+}
+
+#video {
+    background-color: black;
+    margin-left: 65px;
+    margin-top: 35px;
+    margin-bottom: 90px;
+    border: 4px solid black;
+    border-radius: 5px;
+    width: 90%;
+    height: 50%;
+}
+
+#images {
+    background-color: black;
+    margin-left: 65px;
+    margin-top: 25px;
+    margin-bottom: 90px;
+    border: 4px solid black;
+    border-radius: 5px;
+    width: 90%;
+    height: 400px;
+}
+
+#imageone {
+    float: left;
+    height: 100%;
+    width: 49%;
+    display: block;
+    margin-right: 3px;
+}
+
+#imagetwo {
+    float: right;
+    height: 100%;
+    width: 49%;
+    display: block;
+    margin-left: 3px;
+}
+
+#audio {
+    margin-left: 65px;
+    margin-top: 25px;
+    margin-bottom: 90px;
+    border-radius: 5px;
+    width: 90%;
+    height: 60px;
+}
+
+audio {
+    color: black;
+    background-color: white;
+    display: block;
+    width: 100%;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: darkgrey;
+}
+
+footer {
+    margin-top: 40px;
+    float: left;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
