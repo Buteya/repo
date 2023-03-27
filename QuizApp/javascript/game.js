@@ -51,8 +51,9 @@ startGame = ()=>{
 
 getNewQuestion = ()=>{
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
+        localStorage.setItem('mostRecentScore',score);
         //go to the end page
-        return window.location.assign('/html/end.html')
+        return window.location.assign('C:/Users/butey/OneDrive/Desktop/IST/QuizApp/html/end.html');
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
