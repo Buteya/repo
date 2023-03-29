@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input with JavaScript</title>
+    </head>
+    <body>
+        <form style="display: flex;flex-direction: column;text-align: center;margin-top: 2rem;padding: 2rem;">
+            <label style="font-size: 2rem;">Sum of two numbers</label>
+            <input style="font-size: 1rem;text-align: center;margin: .5rem;" id="first" type="text" placeholder="Enter any number">
+            <input style="font-size: 1rem;text-align: center;margin: .5rem;" id="second" type="text" placeholder="Enter any number">
+            <div style="font-size: 1rem;text-align: center;margin: .5rem;"  id="output"></div>
+            <input style="font-size: 1rem;text-align: center;margin: .5rem;"  id="answer" type="button" value="Answer" onclick="sumTwoNumbers()">
+        </form>
+        <script>
+            sumTwoNumbers = ()=>{
+                let numOne = parseFloat(document.getElementById('first').value);
+                let numTwo = parseFloat(document.getElementById('second').value);
+                let sumDisplay = document.getElementById('output');
+                let sum = numOne + numTwo;
+                sumDisplay.innerHTML = sum;
+            }
+        </script>
+    </body>
+</html>
