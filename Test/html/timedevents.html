@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timed Events</title>
+    </head>
+    <body>
+        <h2>Working with Timing Events</h2>
+        <div id="Timer"></div>
+        <button onclick="startTime()">Start Timer</button>
+        <button onclick="stopTime()">Stop Timer</button><br><br>
+        <input type="text" placeholder="Time in seconds" id="timerId"><br><br>
+        <button onclick="startTimer('timerId')">Start Timer</button><button onclick="stopTimer()">Stop Timer</button>
+        <script>
+            let intervalId;
+            var myIntervalId;
+            startTime = ()=>{intervalId = setInterval(getCurrentDateTime,1000)};
+            stopTime = ()=> {clearInterval(intervalId)};
+            getCurrentDateTime = ()=>{
+                let timer = document.getElementById('Timer');
+                timer.innerHTML = new Date();
+            }
+            startTimer = controlId =>{
+                var control = document.getElementById(controlId);
+                var seconds = control.value;
+                seconds = seconds -1;
+                if(seconds == 0){
+                    control.value = "Done";
+                    return;
+                }else{
+                    control.value = seconds;
+                }
+                myIntervalId = setTimeout(()=>startTimer('timerId'),1000);
+            }
+            stopTimer = ()=>{
+                clearTimeout(myIntervalId);
+            }
+            getCurrentDateTime();
+            //setInterval(getCurrentDateTime,1000);
+        </script>
+    </body>
+</html>
