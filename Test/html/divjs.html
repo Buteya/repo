@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Div</title>
+</head>
+<body>
+   <div id="myDiv"></div> 
+   <style>
+        #myDiv{
+            position: relative;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 20rem;
+            background-color: rgba(23, 34, 45, 0.6);
+        }
+        .mydiv{
+            transform: scale(2);
+            background-color: rgba(30, 19, 19,0.6) !important;
+            z-index: 1000;
+            border-radius: 2%;
+        }
+   </style>
+   <script>
+        let myDiv = document.getElementById('myDiv');
+        myDiv.addEventListener('click',e=>{myDiv.classList.toggle('mydiv');});
+        
+   </script>
+</body>
+</html>
