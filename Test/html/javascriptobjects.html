@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    <script>
+        class Person{
+            #name;
+            #age;
+            #gender;
+            constructor(name,age,gender){
+                this.#name = name;
+                this.#age = age;
+                this.#gender = gender;
+            }
+            get name(){
+                console.log(`${this.#name}`);
+                return this.#name;
+            }
+            set name(name){
+                this.#name = name;
+            }
+            get age(){
+                console.log(this.#age);
+                return this.#age;
+            }
+            set age(age){
+                this.#age = age;
+            }
+            get gender(){
+                console.log(this.#gender);
+                return this.#gender;
+            }
+            set gender(gender){
+                this.#gender = gender;
+            }
+            eat=()=>{
+                console.log(`${this.#name} of age ${this.#age} and ${this.#gender} is eating`);
+            }
+            walk=()=>{
+                console.log(`${this.#name} of age ${this.#age} and ${this.#gender} is walking`);  
+            }
+        }
+        class Student extends Person{
+            #program;
+            #studyYear;
+            constructor(name,age,gender,program,studyYear){
+                super(name,age,gender);
+                this.#program = program;
+                this.#studyYear = studyYear;
+            }
+            get program(){
+                console.log(this.#program);
+            }
+            set program(program){
+                this.#program = program;
+            }
+            get studyYear(){
+                console.log(this.#studyYear);
+            }
+            set studyYear(studyYear){
+                this.#studyYear = studyYear;
+            }
+            study = ()=>{
+                console.log(`${this.name} of age ${this.age} is studying ${this.#program} in year ${this.#studyYear}`);
+            }
+            exam = ()=>{
+                console.log(`${this.name} of age ${this.age} is doing exams for ${this.#program} for year ${this.#studyYear}`);
+            }
+        }
+        class Teacher extends Person{
+            #designation;
+            #salary;
+            constructor(name,designation,salary){
+                super(name);
+                this.#designation = designation;
+                this.#salary = salary;
+            }
+            get designation(){
+                console.log(this.#designation);
+            }
+            set designation(designation){
+                this.#designation = designation;
+            }
+            get salary(){
+                console.log(this.#salary);
+            }
+            set salary(salary){
+                this.#salary = salary;
+            }
+            teach = ()=>{
+                console.log(`${this.name} is teaching`);
+            }
+            holdExams = ()=>{
+                console.log(`${this.name} is holding exams`);
+            }
+        }
+        class Doctor extends Person{
+            #designation;
+            #salary;
+            constructor(name,designation,salary){
+                super(name);
+                this.#designation = designation;
+                this.#salary = salary;
+            }
+            get designation(){
+                console.log(this.#designation);
+            }
+            set designation(designation){
+                this.#designation = designation;
+            }
+            get salary(){
+                console.log(this.#salary);
+            }
+            set salary(salary){
+                this.#salary = salary;
+            }
+            checkUp = ()=>{
+                console.log(`${this.name} is doing a check up`);
+            }
+            prescribe = ()=>{
+                console.log(`${this.name} is prescribing medicine`);
+            }
+        }
+        let steve = new Person('masira',23,'male'); 
+        let studentOne = new Student(steve.name,steve.age,steve.gender,'Fundamentals of Object Oriented Programming',4);
+        let teacher = new Teacher(steve.name,'Math Teacher','KSH 10,000');
+        let doctor = new Doctor(steve.name,'Neurosurgeon','KSH 1,000,000');
+        steve.name;
+        steve.age;
+        steve.gender;
+        steve.eat();
+        steve.walk();
+        studentOne.name;
+        studentOne.age;
+        studentOne.gender;
+        studentOne.program;
+        studentOne.studyYear;
+        studentOne.walk();
+        studentOne.eat();
+        studentOne.study();
+        studentOne.exam();
+        teacher.name;
+        teacher.designation;
+        teacher.salary;
+        teacher.teach();
+        teacher.holdExams();
+        doctor.name;
+        doctor.designation;
+        doctor.salary;
+        doctor.checkUp();
+        doctor.prescribe();
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card and Dynamic Div JavaScript</title>
+</head>
+<body>
+    <div id="card">
+        <div id="image"></div>
+        <div id="details">
+            <ul>
+                <li><h3>Model</h3><p>Aston Martin DB12</p> </li>
+                <li><h3>Year</h3><p>2005</p></li>
+                <li><h3>Price</h3><p>11,000,000 KSH</p></li>
+            </ul>
+        </div>
+        <button type="button" onclick="createNewDiv()">Buy</button>
+    </div>
+    <style>
+        #card{
+            display:flex;
+            flex-direction: column;
+            margin: 2rem auto;
+            border-radius: 1rem;
+            border: 0.12rem solid rgba(14, 14, 14,0.6);
+            box-shadow: 0.07rem 0.07rem 0.1rem 0.28rem rgba(34, 33, 33, 0.1);
+            height: 25rem;
+            width: 34%;
+        }
+        #image{
+            background-color: beige;
+            height:14rem;
+            width:18rem;
+            margin: 1rem auto;
+            background-image: url("C:/Users/butey/OneDrive/Desktop/IST/Test/assets/images/sea.jpg");
+        }
+        #details{
+            height: 8rem;
+            width: 18rem;
+            margin: 1rem auto;
+        }
+        #details ul {
+            list-style-type: none;
+        }
+        #details ul li {
+            display: flex;
+            flex-direction: row;
+        }
+        #details ul li h3{
+            margin: 0;
+            padding:0;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+        }
+        #details ul li p{
+            margin: 0;
+            padding: 0;
+            padding-top: 0.6rem;
+        }
+        button {
+            border-color: green;
+            border-radius: 0.5rem;
+            height: 3rem;
+            width:4rem;
+            background-color: green;
+            color: white;
+            margin-bottom: 1rem;
+            margin-left: 75%;
+        }
+    </style>
+    <script>
+        createNewDiv = ()=>{
+            let card = document.getElementById('card');
+            let outputDiv = document.createElement('div');
+            let title = document.createElement('h1');
+            let overallDiv = document.createElement('div');
+            let imageDiv = document.createElement('div');
+            let detailsDiv = document.createElement('div');
+            let buy = document.createElement('button');
+            let close = document.createElement('button');
+            let buttonDiv = document.createElement('div');
+            buy.innerText = 'Buy';
+            close.innerText = 'Close';
+            buttonDiv.style.display = 'flex';
+            buttonDiv.style.flexDirection = 'row';
+            buttonDiv.style.backgroundColor = 'blue';
+            buttonDiv.append(close);
+            buttonDiv.append(buy);
+            overallDiv.style.display = 'flex';
+            overallDiv.style.flexDirection = 'row';
+            overallDiv.append(imageDiv);
+            overallDiv.append(detailsDiv);
+            imageDiv.style.borderRadius = '1rem';
+            imageDiv.style.backgroundColor = 'white';
+            imageDiv.style.height = '40rem';
+            imageDiv.style.width = '66%';
+            imageDiv.style.marginLeft = '2rem';
+            imageDiv.style.backgroundImage = 'url("C:/Users/butey/OneDrive/Desktop/IST/Test/assets/images/sea.jpg")';
+            imageDiv.style.backgroundRepeat = 'none';
+            detailsDiv.style.borderRadius = '1rem';
+            detailsDiv.style.backgroundColor = 'white';
+            detailsDiv.style.height = '40rem';
+            detailsDiv.style.width = '26%';
+            detailsDiv.style.marginLeft = '2rem';
+            title.innerText = 'Aston Martin DB12';
+            title.style.textAlign = 'center';
+            title.style.color = 'white';
+            title.style.margin = '1rem auto';
+            outputDiv.style.backgroundColor = 'rgba(0,0,0,0.9)';
+            outputDiv.style.height = '50rem';
+            outputDiv.style.width = '100%';
+            outputDiv.style.display = 'flex';
+            outputDiv.style.flexDirection = 'column';
+            card.style.display = 'none';
+            outputDiv.append(title);
+            outputDiv.append(overallDiv);
+            outputDiv.append(buttonDiv);
+            document.body.append(outputDiv);
+            console.log('pressed');
+        }
+    </script>
+</body>
+</html>
