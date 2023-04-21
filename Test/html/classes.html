@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes JavaScript</title>
+</head>
+<body>
+    <script>
+        //Class Declaration
+        class Rectangle{
+            #height;
+            #width;
+            constructor(height,width){
+                this.#height = height;
+                this.#width = width;
+            }
+            get height(){
+                console.log(`The height of Your Rectangle is: ${this.#height}`);
+                return this.#height;
+            }
+            set height(newValue){
+                this.#height = newValue;
+            }
+            get width(){
+                console.log(`The width of your Rectangle is: ${this.#width}`);
+                return this.#width;
+            }
+            set width(newValue){
+                this.#width = newValue;
+            }
+            areaOfRect = ()=>{
+                let area = this.#height * this.#width;
+                console.log(`The area of your Rectangle is: ${area}`);
+                return area;
+            }
+            // areaOfRect = (height,width) =>{
+            //     let area = height * width;
+            //     console.log(area);
+            //     return area;
+            // }
+        }
+
+        //Expression; The class is anonymous but assigned to a variable
+        const Rectangle1 = class {
+            #height;
+            #width;
+            constructor(height,width){
+                this.#height = height;
+                this.#width = width;
+            }
+            get height(){
+                console.log(`The height of Your Rectangle is: ${this.#height}`);
+                return this.#height;
+            }
+            set height(newValue){
+                this.#height = newValue;
+            }
+            get width(){
+                console.log(`The width of your Rectangle is: ${this.#width}`);
+                return this.#width;
+            }
+            set width(newValue){
+                this.#width = newValue;
+            }
+            areaOfRect = ()=>{
+                let area = this.#height * this.#width;
+                console.log(`The area of your Rectangle is: ${area}`);
+                return area;
+            }
+            // areaOfRect = (height,width) =>{
+            //     let area = height * width;
+            //     console.log(area);
+            //     return area;
+            // }
+        };
+
+        //Expression; The class has it`s own name
+        const Rectangle2 = class Rectangle3 {
+            #height;
+            #width;
+            constructor(height,width){
+                this.#height = height;
+                this.#width = width;
+            }
+            get height(){
+                console.log(`The height of Your Rectangle is: ${this.#height}`);
+                return this.#height;
+            }
+            set height(newValue){
+                this.#height = newValue;
+            }
+            get width(){
+                console.log(`The width of your Rectangle is: ${this.#width}`);
+                return this.#width;
+            }
+            set width(newValue){
+                this.#width = newValue;
+            }
+            areaOfRect = ()=>{
+                let area = this.#height * this.#width;
+                console.log(`The area of your Rectangle is: ${area}`);
+                return area;
+            }
+            // areaOfRect = (height,width) =>{
+            //     let area = height * width;
+            //     console.log(area);
+            //     return area;
+            // }
+        };
+        let rect = new Rectangle();
+        rect.height = 10;
+        rect.height;
+        rect.width = 12;
+        rect.width;
+        rect.areaOfRect();
+        let rect1 = new Rectangle(12,34);
+        rect1.height;
+        rect1.width;
+        rect1.areaOfRect();
+    </script>
+</body>
+</html>
