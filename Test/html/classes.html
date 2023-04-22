@@ -39,6 +39,12 @@
             //     console.log(area);
             //     return area;
             // }
+            *getSides(){
+                yield this.#height;
+                yield this.#width;
+                yield this.#height;
+                yield this.#width;
+            }
         }
 
         //Expression; The class is anonymous but assigned to a variable
@@ -73,6 +79,12 @@
             //     console.log(area);
             //     return area;
             // }
+            *getSides(){
+                yield this.#height;
+                yield this.#width;
+                yield this.#height;
+                yield this.#width;
+            }
         };
 
         //Expression; The class has it`s own name
@@ -107,6 +119,12 @@
             //     console.log(area);
             //     return area;
             // }
+            *getSides(){
+                yield this.#height;
+                yield this.#width;
+                yield this.#height;
+                yield this.#width;
+            }
         };
         let rect = new Rectangle();
         rect.height = 10;
@@ -114,10 +132,12 @@
         rect.width = 12;
         rect.width;
         rect.areaOfRect();
+        console.log([...rect.getSides()]);
         let rect1 = new Rectangle(12,34);
         rect1.height;
         rect1.width;
         rect1.areaOfRect();
+        console.log([...rect1.getSides()]);
     </script>
 </body>
 </html>
