@@ -160,6 +160,64 @@
         p2.distance;
         console.log(Point.displayName);
         console.log(Point.distance(p1,p2));
+
+        class Car {
+            constructor(name){
+                this.brand = name;
+            }
+            present(){
+                return 'I have a ' + this.brand;
+            }
+        }
+        class Model extends Car {
+            constructor(name,mod){
+                super(name);
+                this.model = mod;
+            }
+            show(){
+                return this.present() + ', it is a ' + this.model;
+            }
+        }
+        const mycar = new Car("Ford");
+        console.log(mycar.present());
+        const newcar = new Model("Ford","Mustang");
+        console.log(newcar.show());
+
+        class Animal {
+            constructor(name){
+                this.name = name;
+            }
+            speak(){
+                console.log(`${this.name} make a noise.`);
+            }
+        }
+        class Dog extends Animal{
+            constructor(name){
+                super(name);
+            }
+            speak(){
+                console.log(`${this.name} barks.`);
+            }
+        }
+        const d = new Dog("Mitzie");
+        d.speak();
+
+        class Cat {
+            constructor(name){
+                this.name = name;
+            }
+            speak(){
+                console.log(`${this.name} make a noise.`);
+            }
+        }
+        class Lion extends Cat{
+            speak(){
+                super.speak();
+                console.log(`${this.name} roars.`);
+            }
+        }
+        const l = new Lion("Fuzzy");
+        l.speak();
     </script>
 </body>
 </html>
