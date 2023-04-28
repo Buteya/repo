@@ -279,6 +279,35 @@
         console.log(foo);
         foo.constructor();
         console.log(foo);
+        class square extends Polygon{
+            constructor(length){
+                // Here, it calls the parent class' constructor with lengths
+                // provided for the Polygon's width and height
+                super(length,length);
+                // NOTE: In derived classes, `super()` must be called before you
+                // can use `this`. Leaving this out will cause a ReferenceError.
+                this.name = "Square";
+            }
+            get area(){
+                return this.height * this.width;
+            }
+            set area(value){
+                this.height = value ** 0.5;
+                this.width =  value ** 0.5;
+            }
+        }
+        // Make Square extend Rectangle (which is a base class) instead of Polygon
+        Object.setPrototypeOf(Square, Rectangle);
+        const newInstance = new Square();
+        // newInstance is still an instance of Polygon, because we didn't
+        // change the prototype of Square.prototype, so the prototype chain
+        // of newInstance is still
+        //   newInstance --> Square.prototype --> Polygon.prototype
+        console.log(newInstance instanceof Polygon);
+        console.log(newInstance instanceof Rectangle);
+        // However, because super() calls Rectangle as constructor, the name property
+        // of newInstance is initialized with the logic in Rectangle
+        console.log(newInstance.name);
     </script>
 </body>
 </html>
