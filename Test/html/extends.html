@@ -15,6 +15,45 @@
         }
        } 
        console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
+       function OldStyleClass(){
+        this.someProperty = 1;
+       }
+       OldStyleClass.prototype.someMethod = function(){};
+       class ChildClass1 extends OldStyleClass{}
+       class ModernClass {
+        someProperty = 1;
+        someMethod(){}
+       }
+       class AnotherChildClass extends ModernClass{}
+       function Parentclass1(){}
+    //    ParentClass1.protype = 3;
+    //    console.log(Object.prototypeOf(new ParentClass1()));
+    //    Object.getPrototypeOf(ChildClass1) === ParentClass1;
+    //    Object.getPrototypeOf(ChildClass1.prototype) === ParentClass1.prototype;
+       class SomeClass extends class{
+        constructor(){
+            console.log("Base class");
+        }
+       }{
+            constructor(){
+                super();
+                console.log("Derived class");
+            }
+        }
+        new SomeClass();
+        class ParentClass{
+            constructor(){
+                return 1;
+            }
+        }
+        console.log(new ParentClass());
+        class ChildClass extends ParentClass{
+            constructor(){
+                super();
+                return 1;
+            }
+        }
+        // console.log(new ChildClass());
     </script>
 </body>
 </html>
