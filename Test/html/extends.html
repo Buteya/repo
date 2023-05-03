@@ -54,6 +54,14 @@
             }
         }
         // console.log(new ChildClass());
+        class NullClass extends null{
+            constructor(){
+                //Using new.target allows derived classes to have the correct prototype chain.
+                return Object.create(new.target.prototype);
+            }
+        }
+        const proto = Object.getPrototypeOf;
+        console.log(proto(proto(new NullClass())));
     </script>
 </body>
 </html>
