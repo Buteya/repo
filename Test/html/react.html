@@ -25,10 +25,25 @@
             </ul>
           </div>);
       }
+      let myAlert = ()=>{
+        alert('Hi! there');
+      }
+      let Click = ()=>{
+        return(
+          <div>
+            <button onClick={()=>myAlert()}></button>
+          </div>
+        );
+      }
 
       const mydiv = document.getElementById('mydiv');
       const root = ReactDOM.createRoot(mydiv);
-      root.render(<Hello />)
+      root.render(
+        <div>
+         <Hello /> 
+         <Click />
+        </div>
+        );
     </script>
 
   </body>
