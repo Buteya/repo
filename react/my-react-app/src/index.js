@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import NewCar from  './components/Car.js';
 
 class Car extends React.Component {
     render(){
@@ -38,6 +39,7 @@ const myFirstElement = <div>
     <MyCar />
     <CarColor color="red" />
     <Garage />
+    <NewCar />
 </div>
 
 
