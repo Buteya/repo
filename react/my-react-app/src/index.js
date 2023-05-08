@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+class Car extends React.Component {
+    render(){
+        return <h2>Hi, I am a car!</h2>
+    }
+}
+
+const MyCar = ()=>{
+    return <h2>Hi, I am a new car!</h2>
+}
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -14,7 +23,9 @@ const myFirstElement = <div>
             <td>Elsa</td>
         </tr>
     </table>
-    </div>
+    <Car />
+    <MyCar />
+</div>
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
