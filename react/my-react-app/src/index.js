@@ -10,6 +10,9 @@ class Car extends React.Component {
 const MyCar = ()=>{
     return <h2>Hi, I am a new car!</h2>
 }
+let CarColor = (props)=>{
+    return <h2>I am a {props.color} car!</h2>
+}
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -25,6 +28,7 @@ const myFirstElement = <div>
     </table>
     <Car />
     <MyCar />
+    <CarColor color="red" />
 </div>
 
 
