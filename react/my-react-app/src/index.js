@@ -13,6 +13,14 @@ const MyCar = ()=>{
 let CarColor = (props)=>{
     return <h2>I am a {props.color} car!</h2>
 }
+const Garage = ()=>{
+    return(
+        <>
+          <h1>Who lives in my garage?</h1>
+          <Car />
+        </>
+    )
+}
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -29,6 +37,7 @@ const myFirstElement = <div>
     <Car />
     <MyCar />
     <CarColor color="red" />
+    <Garage />
 </div>
 
 
