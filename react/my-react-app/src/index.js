@@ -3,13 +3,36 @@ import ReactDOM from 'react-dom/client';
 import NewCar from  './components/Car.js';
 
 class Car extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            brand:"Ford",
+            model:"Mustang",
+            color: "red",
+            year: 1964
+        };
+    }
+    changeColor = ()=>{
+        this.setState({color: 'blue'});
+    }
     render(){
-        return <h2>Hi, I am a car!</h2>
+        return(
+            <div>
+               <h2>Hi, I am a {this.props.model} {this.state.color} car!</h2>  
+               <h1>My {this.state.brand} </h1>
+               <p>
+                It is a {this.state.color}
+                {this.state.model}
+                from {this.state.year}
+               </p>
+               <button type="button" onClick={this.changeColor()}>Change color</button>
+            </div>
+        )
     }
 }
 
 const MyCar = ()=>{
-    return <h2>Hi, I am a new car!</h2>
+    return <h2>Hi, I am a new {this.props.color}car!</h2>
 }
 let CarColor = (props)=>{
     return <h2>I am a {props.color} car!</h2>
@@ -35,8 +58,8 @@ const myFirstElement = <div>
             <td>Elsa</td>
         </tr>
     </table>
-    <Car />
-    <MyCar />
+    <Car model="Mustang"/>
+    <MyCar color="green" />
     <CarColor color="red" />
     <Garage />
     <NewCar />
