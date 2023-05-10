@@ -35,23 +35,26 @@
           </div>
         );
       }
-
+      const navbar = (
+        <nav>
+          <h1>Bob`s Bistro</h1>
+          <ul>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      );
       const mydiv = document.getElementById('mydiv');
       const root = ReactDOM.createRoot(mydiv);
       root.render(
         <div>
          <Hello /> 
          <Click />
+         {navbar}
         </div>
         );
      
     </script>
-    <script>
-         const h1 = document.createElement('h1');
-        h1.textContent = 'This is an imparative way to program';
-        h1.className = 'header';
-        document.getElementById('mydiv').appendChild(h1);
-    </script>
-
   </body>
 </html>
