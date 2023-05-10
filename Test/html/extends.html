@@ -137,6 +137,12 @@
         };
         class Foo{}
         class Bar extends calculatorMixin(randomizerMixin(Foo)){}
+        class ReadOnlyMap extends Map{
+            set(){
+                throw new TypeError("A read-only map must be set at construction time.");
+            }
+        }
+        const m = new ReadOnlyMap([["a",1]]);
     </script>
 </body>
 
