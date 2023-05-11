@@ -66,7 +66,7 @@ class Child extends React.Component {
 }
 
 const MyCar = ()=>{
-    return <h2>Hi, I am a new {this.props.color}car!</h2>
+    return <h2>Hi, I am a new car!</h2>
 }
 let CarColor = (props)=>{
     return <h2>I am a {props.color} car!</h2>
@@ -91,15 +91,20 @@ const Football =()=>{
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
-        <tr>
+        <thead>
+         <tr>
             <th>Name</th>
-        </tr>
-        <tr>
+        </tr>   
+        </thead>
+        <tbody>
+            <tr>
             <td>John</td>
         </tr>
         <tr>
             <td>Elsa</td>
-        </tr>
+        </tr> 
+        </tbody>
+       
     </table>
     <Car model="Mustang"/>
     <MyCar color="green" />
