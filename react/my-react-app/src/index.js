@@ -79,6 +79,15 @@ const Garage = ()=>{
         </>
     )
 }
+const Football =()=>{
+    const shoot = (a,b)=>{
+        alert(a);
+        alert(b.type);
+    }
+    return(
+        <button onClick={(event)=>shoot("Goal!",event)}>Take the shot!</button>
+    );
+}
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -99,6 +108,7 @@ const myFirstElement = <div>
     <NewCar />
     <Container />
     <Header />
+    <Football />
 </div>
 
 
