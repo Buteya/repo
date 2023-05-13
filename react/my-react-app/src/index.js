@@ -99,10 +99,11 @@ const MadeGoal = ()=>{
 }
 const Goal = (props)=>{
     const isGoal = props.isGoal;
-    if(isGoal){
-        return <MadeGoal />;
-    }
-    return <MissedGoal />;
+        return(
+        <div>
+            {isGoal? <MadeGoal />: <MissedGoal />}
+        </div>
+        );  
 }
 const myFirstElement = <div>
     <h1>Hello React!</h1>
