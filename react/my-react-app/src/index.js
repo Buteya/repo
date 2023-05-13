@@ -71,10 +71,13 @@ const MyCar = ()=>{
 let CarColor = (props)=>{
     return <h2>I am a {props.color} car!</h2>
 }
-const Garage = ()=>{
+const cars = ['Ford','BMW','Audi'];
+const Garage = (props)=>{
+    const cars = props.cars;
     return(
         <>
           <h1>Who lives in my garage?</h1>
+          {cars.length > 0 && <h2>You have {cars.length} cars in your garage.</h2>}
           <Car />
         </>
     )
@@ -122,14 +125,13 @@ const myFirstElement = <div>
     <Car model="Mustang"/>
     <MyCar color="green" />
     <CarColor color="red" />
-    <Garage />
+    <Garage cars={cars} />
     <NewCar />
     <Container />
     <Header />
     <Football />
     <Goal isGoal={false} />
 </div>
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myFirstElement);
