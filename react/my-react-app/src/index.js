@@ -88,6 +88,19 @@ const Football =()=>{
         <button onClick={(event)=>shoot("Goal!",event)}>Take the shot!</button>
     );
 }
+const MissedGoal = ()=>{
+    return <h1>MISSED!</h1>;
+}
+const MadeGoal = ()=>{
+    return <h1>Goal!</h1>;
+}
+const Goal = (props)=>{
+    const isGoal = props.isGoal;
+    if(isGoal){
+        return <MadeGoal />;
+    }
+    return <MissedGoal />;
+}
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -114,6 +127,7 @@ const myFirstElement = <div>
     <Container />
     <Header />
     <Football />
+    <Goal isGoal={false} />
 </div>
 
 
