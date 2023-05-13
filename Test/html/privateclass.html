@@ -23,6 +23,17 @@
                 //...
             }
         }
+
+        class ClassWithPrivateField{
+            #privateField;
+            constructor(){
+                this.#privateField = 42;
+                delete this.#privateField;
+                this.#undeclaredField = 444;
+            }
+        }
+        const instance = new ClassWithPrivateField();
+        // instance.#privateField === 444;
     </script>
 </body>
 </html>
