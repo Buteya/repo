@@ -34,6 +34,15 @@
         }
         const instance = new ClassWithPrivateField();
         // instance.#privateField === 444;
+
+        class C{
+            #x;
+            static getX(obj){
+                return obj.#x;
+            }
+        }
+        console.log(C.getX(new c()));
+        console.log(C.getX({}));
     </script>
 </body>
 </html>
