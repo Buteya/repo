@@ -71,7 +71,11 @@ const MyCar = ()=>{
 let CarColor = (props)=>{
     return <h2>I am a {props.color} car!</h2>
 }
-const cars = ['Ford','BMW','Audi'];
+const cars = [
+    {id:1,brand:'Ford'},
+    {id:2,brand:'BMW'},
+    {id:3,brand:'Ford'}
+];
 const Garage = (props)=>{
     const cars = props.cars;
     return(
@@ -79,7 +83,7 @@ const Garage = (props)=>{
           <h1>Who lives in my garage?</h1>
           {cars.length > 0 && <h2>You have {cars.length} cars in your garage.</h2>}
           <ul>
-            {cars.map((car)=><Car brand={car}></Car>)}
+            {cars.map((car)=><Car key={car.id} brand={car.brand}></Car>)}
           </ul>
           <Car />
         </>
