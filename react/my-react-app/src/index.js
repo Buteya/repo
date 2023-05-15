@@ -78,6 +78,9 @@ const Garage = (props)=>{
         <>
           <h1>Who lives in my garage?</h1>
           {cars.length > 0 && <h2>You have {cars.length} cars in your garage.</h2>}
+          <ul>
+            {cars.map((car)=><Car brand={car}></Car>)}
+          </ul>
           <Car />
         </>
     )
