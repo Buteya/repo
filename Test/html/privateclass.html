@@ -24,16 +24,16 @@
             }
         }
 
-        class ClassWithPrivateField{
-            #privateField;
-            constructor(){
-                this.#privateField = 42;
-                delete this.#privateField;
-                this.#undeclaredField = 444;
-            }
-        }
-        const instance = new ClassWithPrivateField();
-        // instance.#privateField === 444;
+        // class ClassWithPrivateField{
+        //     #privateField;
+        //     constructor(){
+        //         this.#privateField = 42;
+        //         delete this.#privateField;
+        //         this.#undeclaredField = 444;
+        //     }
+        // }
+        // const instance = new ClassWithPrivateField();
+        // // instance.#privateField === 444;
 
         class C{
             #x;
@@ -43,6 +43,21 @@
         }
         console.log(C.getX(new c()));
         console.log(C.getX({}));
+
+        class ClassWithPrivateField{
+            #privateField;
+            constructor(){
+                this.#privateField = 42;
+            }
+        }
+        class SubClass extends ClassWithPrivateField{
+            #subPrivateField;
+            constructor(){
+                super();
+                this.#subPrivateField = 23;
+            }
+        }
+        new SubClass();
     </script>
 </body>
 </html>
