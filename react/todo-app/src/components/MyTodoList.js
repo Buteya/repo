@@ -2,7 +2,7 @@ import Todo from './Todo.js';
 
 const MyTodoList = ({todoList,setTodoList})=>{
     return(
-        <div className="todolist">
+        <div className="todoList" style={{borderBottom:'1px solid #111'}}>
             <h3>Todo list...</h3>
             <h4>{
             todoList.map(

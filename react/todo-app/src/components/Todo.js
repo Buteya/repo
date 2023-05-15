@@ -5,9 +5,9 @@ const Todo = ({item,todoList,setTodoList})=>{
         setTodoList(todoList.filter((todo)=>todo.id !== item.id));
     }
     return(
-        <div className="todoItem">
-            <h4>{item.name}</h4>
-            <Button variant="danger" onClick={deleteTodo}>done</Button>
+        <div>
+            <h4 className="text-start p-2 mt-4">{item.name}</h4>
+            <Button className="mb-4" variant="danger" onClick={deleteTodo} >done</Button>
         </div>
     );
 }
