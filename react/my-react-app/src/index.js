@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import NewCar from  './components/Car.js';
-import Header from './components/Header.js';
+// import Header from './components/Header.js';
+import MyForm from './components/MyForm.js';
 
 class Car extends React.Component {
     constructor(props){
@@ -136,9 +137,10 @@ const myFirstElement = <div>
     <Garage cars={cars} />
     <NewCar />
     <Container />
-    <Header />
+    {/* <Header /> */}
     <Football />
     <Goal isGoal={false} />
+    <MyForm />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
