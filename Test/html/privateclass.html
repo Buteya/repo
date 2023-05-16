@@ -58,6 +58,29 @@
             }
         }
         new SubClass();
+
+        class Stamper extends class{
+            //A base class where constructor returning the object its given
+            constructor(){
+                return obj;
+            }
+        }{
+            //This declaration will "stamp" the private field onto the 
+            //object returned by the base class constructor
+            #stamp = 42;
+            static getStamp(obj){
+                return obj.#stamp;
+            }
+        }
+
+        const obj = {};
+        new Stamper(obj);
+        //'Stamper' calls 'Base' which returns obj, so obj is
+        //new the this value Stamper then defines #stamp on obj
+
+        console.log(obj);
+        console.log(Stamper.getStamp(obj));
+        console.log(obj instanceof Stamper);
     </script>
 </body>
 </html>
