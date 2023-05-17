@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import NewCar from  './components/Car.js';
 // import Header from './components/Header.js';
 import MyForm from './components/MyForm.js';
+import App from './App.js';
 
 class Car extends React.Component {
     constructor(props){
@@ -141,6 +142,7 @@ const myFirstElement = <div>
     <Football />
     <Goal isGoal={false} />
     <MyForm />
+    <App />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
