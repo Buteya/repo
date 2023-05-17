@@ -98,6 +98,24 @@
 
         console.log(ClassWithPrivateStaticField.publicStaticMethod());
         console.log(new ClassWithPrivateStaticField().publicInstanceMethod());
+
+        class BaseClassWithPrivateStaticField{
+            static #PRIVATE_STATTIC_FIELD;
+
+            static basePublicStaticMethod(){
+                //When invoked through super, 'this' still refers to subclass
+                return this.#PRIVATE_STATIC_FIELD;
+            }
+        }
+
+        class SubClasss extends BaseClassWithPrivateStaticField{
+            static callSuperBaseMethod(){
+                return super.basePublicStaticMethod();
+            }
+        }
+        SubClasss.basePublicStaticMethod();//TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from
+        //an object whose class didnt declare it.
+        SubClasss.callSuperBaseMethod(); //TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it.
     </script>
 </body>
 </html>
