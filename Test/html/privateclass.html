@@ -81,6 +81,23 @@
         console.log(obj);
         console.log(Stamper.getStamp(obj));
         console.log(obj instanceof Stamper);
+
+        class ClassWithPrivateStaticField{
+            static #PRIVATE_STATIC_FIELD;
+
+            static publicStaticMethod(){
+                ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+                return ClassWithPrivateStaticField.#PRIVATE_STATIC__FIELD;
+            }
+
+            publiceInstanceMethod(){
+                ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+                return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+            }
+        }
+
+        console.log(ClassWithPrivateStaticField.publicStaticMethod());
+        console.log(new ClassWithPrivateStaticField().publicInstanceMethod());
     </script>
 </body>
 </html>
