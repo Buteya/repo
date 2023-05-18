@@ -6,8 +6,17 @@ import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
+import {useState} from 'react';
+import Todos from './components/Todos';
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState(["Todo 1", "Todo 2"]);
+
+  const increment = ()=>{
+    setCount((c)=>c+1);
+  }
+
   return (
     <BrowserRouter>
      <div className="App">
@@ -21,6 +30,14 @@ function App() {
         <Route path="*" element={<NoPage />}></Route>
       </Route>
     </Routes>
+    <>
+      <Todos todos={todos} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
     </BrowserRouter>
   );
 }
