@@ -116,6 +116,44 @@
         SubClasss.basePublicStaticMethod();//TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from
         //an object whose class didnt declare it.
         SubClasss.callSuperBaseMethod(); //TypeError: Cannot read private member #PRIVATE_STATIC_FIELD from an object whose class did not declare it.
+
+        class ClassWithPrivateMethod{
+            #privateMethod(){
+                return "Hello World!";
+            }
+            getPrivateMessage(){
+                return this.#privateMethod();
+            }
+        }
+
+        const instance =  new ClassWithPrivateMethod();
+        console.log(insatance.getPrivateMessage());
+
+        class ClassWithPrivateAccessor{
+            #message;
+            get #decoratedMessage(){
+                return `:)${this.#message}:(`;
+            }
+            set #decoratedMessage(msg){
+                this.#message = msg;
+            }
+            constructor(){
+                this.#decoratedMessage = "hello world";
+                console.log(this.#decoratedMessage);
+            }
+        }
+
+        new ClassWithPrivateAccessor();
+
+        class C{
+            #method(){}
+            static #getMethod(x){
+                return x.#method;
+            }
+        }
+
+        console.log(C.getMethod(new C()));
+        console.log(C.getMethod(C.prototype));//TypeError: receiver must be an instance of class C
     </script>
 </body>
 </html>
