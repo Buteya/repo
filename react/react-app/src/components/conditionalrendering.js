@@ -2,16 +2,14 @@ import {useState} from 'react';
 
 const ConditionalRendering = ()=>{
     let [display, setDisplay] = useState(false);
-    let output;
+    //  let output; 
     if(display){
-        setDisplay(display += !display);
-        return(
-            <div>
+        setDisplay(false);
+        return (<div>
                 <h1>Display is true hence this line is displayed.</h1>
-            </div>
-        );
+             </div>);
     }else {
-        setDisplay(display += !display);
+        setDisplay(false);
         return(
             <div>
                 <h1>Displat is false.</h1>
