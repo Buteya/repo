@@ -1,17 +1,19 @@
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import BmiResult from './BmiResult.js';
 
-const BmiLayout = ({age,setAge,height,setHeight,weight,setWeight})=>{
-    let BMI = 0;
+
+const BmiLayout = ({age,setAge,height,setHeight,weight,setWeight,BMI,setBMI})=>{
     const handleSubmit = (event)=>{
         event.preventDefault();
-        alert(age+" "+height+" "+weight);
-        BMI = weight/(height * height);
-        alert(BMI);
+        setBMI(weight/(height * height)) ;
+        setAge();
+        setHeight();
+        setWeight();
     }
     return(
-        <Card style={{width:'30rem',marginTop:"3rem"}} className="mx-auto">
+        (BMI !== 0) ?<BmiResult BMI={BMI} setBMI={setBMI} />:<Card style={{width:'30rem',marginTop:"3rem"}} className="mx-auto">
             <Card.Title style={{paddingTop:'3rem',margin:'0'}}>BMI Calculator</Card.Title>
             <Form style={{padding:'1rem'}} onSubmit={handleSubmit}>
                 <Form.Group style={{margin:'2rem'}} controlId="formBasicEmail">

@@ -7,6 +7,7 @@ function App() {
   const [age,setAge] = useState(0);
   const [height, setHeight] = useState(0);
   const [weight, setWeight] = useState(0);
+  const [BMI,setBMI] = useState(0);
 
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
         setHeight={setHeight}
         weight={weight}
         setWeight={setWeight}
+        BMI = {BMI}
+        setBMI={setBMI}
       />
     </div>
   );
