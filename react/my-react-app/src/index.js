@@ -4,6 +4,7 @@ import NewCar from  './components/Car.js';
 // import Header from './components/Header.js';
 import MyForm from './components/MyForm.js';
 import App from './App.js';
+import './css/style.css';
 
 class Car extends React.Component {
     constructor(props){
@@ -114,6 +115,21 @@ const Goal = (props)=>{
         </div>
         );  
 }
+const Header = ()=>{
+    const myStyle = {
+        color:'white',
+        backgroundColor:'DodgerBlue',
+        padding:'10px',
+        fontFamily:'Sans-Serif',
+    };
+    return(
+        <>
+            <h1 style={{color:'red'}}>Hello style!</h1>
+            <p style={{backgroundColor:'lightblue'}}>Add a little style!</p>
+            <p style={myStyle}>Add a little more style.</p>
+        </>
+    );
+}
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -143,6 +159,7 @@ const myFirstElement = <div>
     <Goal isGoal={false} />
     <MyForm />
     <App />
+    <Header />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
