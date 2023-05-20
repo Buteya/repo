@@ -7,13 +7,10 @@ import BmiResult from './BmiResult.js';
 const BmiLayout = ({age,setAge,height,setHeight,weight,setWeight,BMI,setBMI})=>{
     const handleSubmit = (event)=>{
         event.preventDefault();
-        setBMI(weight/(height * height)) ;
-        setAge();
-        setHeight();
-        setWeight();
+        setBMI(Math.trunc(weight/(height * height))) ;
     }
     return(
-        (BMI !== 0) ?<BmiResult BMI={BMI} setBMI={setBMI} />:<Card style={{width:'30rem',marginTop:"3rem"}} className="mx-auto">
+        (BMI !== 0) ?<BmiResult BMI={BMI} setBMI={setBMI} age={age} setHeight={setHeight} setWeight={setWeight} setAge={setAge} />:<Card style={{width:'30rem',marginTop:"3rem"}} className="mx-auto">
             <Card.Title style={{paddingTop:'3rem',margin:'0'}}>BMI Calculator</Card.Title>
             <Form style={{padding:'1rem'}} onSubmit={handleSubmit}>
                 <Form.Group style={{margin:'2rem'}} controlId="formBasicEmail">
