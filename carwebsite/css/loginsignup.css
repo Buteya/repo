@@ -1,0 +1,28 @@
+/* login and signup */
+#login-card{
+    width:30rem;
+    margin:auto;
+    margin-top: 8rem;
+    padding:5rem;
+}
+
+#login-form div{
+    margin-bottom:2rem;
+}
+
+#signup-btn{
+    float:left;
+}
+
+#login-btn {
+    float:right;
+}
+
+#forgot-pass{
+    padding-top: 4rem;
+    text-align: center;
+}
+
+#forgot-pass a{
+    text-decoration: none;
+}
