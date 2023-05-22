@@ -5,6 +5,7 @@ import NewCar from  './components/Car.js';
 import MyForm from './components/MyForm.js';
 import App from './App.js';
 import './css/style.css';
+import './sass/my-sass.scss';
 
 class Car extends React.Component {
     constructor(props){
