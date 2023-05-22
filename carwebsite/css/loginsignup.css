@@ -26,3 +26,11 @@
 #forgot-pass a{
     text-decoration: none;
 }
+
+#username-div {
+    display:none;
+}
+
+#confirm-password-div{
+    display:none;
+}

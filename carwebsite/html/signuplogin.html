@@ -12,6 +12,10 @@
     <div id="login-card" class="card" >
         <h1 class="card-title">Login</h1>
         <form id="login-form">
+            <div id="username-div">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username"/>
+            </div>
             <div>
                 <label for="email">Email Address</label>
                 <input type="email" class="form-control" id="email"/>
@@ -20,16 +24,21 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password"/>
             </div>
+            <div id="confirm-password-div">
+                <label for="confirm-password">Confrim Password</label>
+                <input type="password" class="form-control" id="confirm-password"/>
+            </div>
             <div> 
                 <!-- note:
                 should enable on click to switch between login and signup form -->
-                <button id="signup-btn" type="button" class="btn btn-outline-primary">SignUp</button> 
-                <button id="login-btn" class="btn btn-primary" type="submit">Login</button>
+                <button onclick="signUp()" id="signup-btn" type="button" class="btn btn-outline-primary">SignUp</button> 
+                <button onclick="login()" id="login-btn" class="btn btn-primary" type="submit">Login</button>
             </div>
             <div id="forgot-pass">
                 <a href="#" class="link-primary">forgot password?</a>
             </div> 
         </form>
     </div>
+    <script type="text/javascript" src="C:\Users\butey\OneDrive\Desktop\IST\carwebsite\javascript\loginsignup.js"></script>
 </body>
 </html>
