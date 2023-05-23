@@ -6,7 +6,7 @@ import MyForm from './components/MyForm.js';
 import App from './App.js';
 import './css/style.css';
 import './sass/my-sass.scss';
-import React,{useState} from 'react';
+import {useState} from 'react';
 
 class Car extends React.Component {
     constructor(props){
