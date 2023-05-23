@@ -6,6 +6,7 @@ import MyForm from './components/MyForm.js';
 import App from './App.js';
 import './css/style.css';
 import './sass/my-sass.scss';
+import React,{useState} from 'react';
 
 class Car extends React.Component {
     constructor(props){
@@ -131,6 +132,21 @@ const Header = ()=>{
         </>
     );
 }
+
+const FavoriteColor = ()=>{
+    const [color,setColor] = useState("red");
+
+    return(
+        <>
+            <h1>My Fovrite color is {color}</h1>
+            <button type="button" onClick={()=>setColor("Blue")}>Blue</button>
+            <button type="button" onClick={()=>setColor("Red")}>Red</button>
+            <button type="button" onClick={()=>setColor("Pink")}>Pink</button>
+            <button type="button" onClick={()=>setColor("Green")}>Green</button>
+        </>
+    );
+}
+
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -161,6 +177,7 @@ const myFirstElement = <div>
     <MyForm />
     <App />
     <Header />
+    <FavoriteColor />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
