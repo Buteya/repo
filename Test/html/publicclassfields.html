@@ -8,12 +8,78 @@
 </head>
 <body>
    <script type="text/javascript">
+    const PREFIX = "prefix";
     class ClassWithField{
+        field;
+        fieldWithInitializer = "instance field";
+        [`${PREFIX}Field`] = "prefix field";
         instanceField;
         instanceFieldWithInitializer = "instance field";
         static staticField;
         static staticFieldWithInitializer = "static field";
     }
+    const instance = new ClassWithField();
+    console.log(Object.hasOwn(instance,"field"));
+    console.log(instance.field);
+    console.log(instance.fieldWithInitializer);
+    console.log(instance.prefixedField);
+
+    class C{
+        [Math.random()] = 1;
+        obj = {};
+        a = 1;
+        b = this.c;
+        c = this.a + 1;
+        d = this.c + 1;
+    }
+    console.log(new C());
+    console.log(new C());
+    const instance1 = new C();
+    const instance2 = new C();
+    console.log(instance1.obj === instance2.obj);
+    const instance4 = new C();
+    console.log(instance4.d);
+    console.log(instance4.b);
+
+    class Base{
+        baseField = "base field";
+        anotherBaseField = this.baseField;
+        constructor(){
+            console.log("Base constructor:",this.field)
+        }
+        baseMethod(){
+            return "base method output";
+        }
+        set field(val){
+            console.log(val);
+        }
+    }
+
+    class Derived extends Base{
+        subField = super.baseMethod();
+        field = 1;
+        constructor(){
+            super();
+            console.log("Derived constructor:",this.field);
+            this.field = 2;
+        }
+    }
+    const instance3 = new Derived();
+    console.log(instance3.field);
+
+    const base = new Base();
+    const sub =  new Derived();
+
+    console.log(base.anotherBaseField);
+    console.log(sub.subField);
+
+    class DerivedWithConstructor extends Base {
+        constructor(){
+            super();
+            this.field = 1;
+        }
+    }
+    const instance5 =  new DerivedWithConstructor();
    </script> 
 </body>
 </html>
