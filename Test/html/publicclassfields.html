@@ -80,6 +80,21 @@
         }
     }
     const instance5 =  new DerivedWithConstructor();
+    
+    class Person {
+        name = nameArg;
+        constructor(nameArg){}
+        age;
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+    }
+    
+    class Professor extends Person{
+        name = `Professor ${this.name}`;
+    }
+    console.log(new Professor("Radev",54).name);
    </script> 
 </body>
 </html>
