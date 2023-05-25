@@ -7,6 +7,7 @@ import App from './App.js';
 import './css/style.css';
 import './sass/my-sass.scss';
 import {useState} from 'react';
+import Timer from './components/Timer.js';
 
 class Car extends React.Component {
     constructor(props){
@@ -178,6 +179,7 @@ const myFirstElement = <div>
     <App />
     <Header />
     <FavoriteColor />
+    <Timer />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
