@@ -1,5 +1,6 @@
-
-const ReactContext = ({user})=>{
+import {useContext} from 'react';
+    const ReactContext = ({UserContext})=>{
+    const user = useContext(UserContext);
 
     return(
         <>

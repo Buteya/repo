@@ -6,7 +6,7 @@ import MyForm from './components/MyForm.js';
 import App from './App.js';
 import './css/style.css';
 import './sass/my-sass.scss';
-import {useState} from 'react';
+import {useState,createContext,} from 'react';
 import Timer from './components/Timer.js';
 import ReactContext from './components/ReactContext.js';
 
@@ -149,14 +149,15 @@ const FavoriteColor = ()=>{
     );
 }
 
+const UserContext = createContext();
 const Component1 = ()=>{
     const [user,setUser] = useState("Jesse Hall");
 
     return (
-        <>
+        <UserContext.Provider value={user}>
             <h1>{`Hello ${user}`}</h1>
-            <Component2  user={user}/>
-        </>
+            <Component2 />
+        </UserContext.Provider>
     )
 }
 
@@ -164,7 +165,7 @@ const Component2 = ({user})=>{
     return(
         <>
             <h1>{`Hello ${user}`}</h1>
-            <Component3 user={user} />
+            <Component3/>
         </>
     )
 }
@@ -173,7 +174,7 @@ const Component3 = ({user})=>{
     return(
         <>
             <h1>{`Hello  ${user}`}</h1>
-            <Component4 user={user} />
+            <Component4 />
         </>
     )
 }
@@ -182,7 +183,7 @@ const Component4 = ({user}) => {
     return(
         <>
             <h1>{`Hello ${user}`}</h1>
-            <ReactContext user={user} />
+            <ReactContext UserContext={UserContext} />
         </>
     )
 }
@@ -220,7 +221,6 @@ const myFirstElement = <div>
     <FavoriteColor />
     <Timer />
     <Component1 />
-    <ReactContext />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
