@@ -8,6 +8,7 @@ import './css/style.css';
 import './sass/my-sass.scss';
 import {useState} from 'react';
 import Timer from './components/Timer.js';
+import ReactContext from './components/ReactContext.js';
 
 class Car extends React.Component {
     constructor(props){
@@ -148,6 +149,44 @@ const FavoriteColor = ()=>{
     );
 }
 
+const Component1 = ()=>{
+    const [user,setUser] = useState("Jesse Hall");
+
+    return (
+        <>
+            <h1>{`Hello ${user}`}</h1>
+            <Component2  user={user}/>
+        </>
+    )
+}
+
+const Component2 = ({user})=>{
+    return(
+        <>
+            <h1>{`Hello ${user}`}</h1>
+            <Component3 user={user} />
+        </>
+    )
+}
+
+const Component3 = ({user})=>{
+    return(
+        <>
+            <h1>{`Hello  ${user}`}</h1>
+            <Component4 user={user} />
+        </>
+    )
+}
+
+const Component4 = ({user}) => {
+    return(
+        <>
+            <h1>{`Hello ${user}`}</h1>
+            <ReactContext user={user} />
+        </>
+    )
+}
+
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -180,6 +219,8 @@ const myFirstElement = <div>
     <Header />
     <FavoriteColor />
     <Timer />
+    <Component1 />
+    <ReactContext />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
