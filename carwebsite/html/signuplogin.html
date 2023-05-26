@@ -11,7 +11,7 @@
 <body>
     <div id="login-card" class="card" >
         <h1 class="card-title">Login</h1>
-        <form id="login-form" name="login-form" onsubmit="return validateForm()">
+        <form id="login-form" name="login-form" onsubmit="">
             <div id="username-div">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username" name="username"/>
@@ -31,8 +31,8 @@
             <div> 
                 <!-- note:
                 should enable on click to switch between login and signup form -->
-                <button onclick="signUp()" id="signup-btn" type="button" class="btn btn-outline-primary">SignUp</button> 
-                <button onclick="login()" id="login-btn" class="btn btn-primary" type="button">Login</button>
+                <button onclick="swithForm() " id="signup-btn" type="button" class="btn btn-outline-primary">SignUp</button> 
+                <button onclick="" id="login-btn" class="btn btn-primary" type="submit">Login</button>
             </div>
             <div id="forgot-pass">
                 <a href="#" class="link-primary">forgot password?</a>

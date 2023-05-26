@@ -7,8 +7,21 @@ const email = document.forms["login-form"]["email"].value;
 const password = document.forms["login-form"]["password"].value;
 const confirmPassword = document.forms["login-form"]["confirm-password"].value;
 
-let signingup = false;
-let logingin = false;
+let loggingIn = false;
+const swithForm = ()=>{
+        signUpBtn.addEventListener('click',()=>{
+            console.log(loggingIn)
+            if(!loggingIn){
+                 usernameDiv.style.display = 'block';
+            confirmPasswordDiv.style.display = 'block';
+            loggingIn = !loggingIn;
+            }else{
+               usernameDiv.style.display = 'none';
+                confirmPasswordDiv.style.display = 'none';
+            loggingIn = !loggingIn;
+            } 
+        })
+}
 
 // setup form validation
 const login = ()=>{
@@ -46,6 +59,8 @@ const validateForm = ()=>{
     if(signingup){
         if(username == "" && email == "" && password == ""){
         alert("Username, Email and Password must be filled out");
+    }else if(username == ""){
+        alert("Username must be filled in");
     }else if(email == ""){
         alert("Email must be filled out");
     }else if(password == ""){
