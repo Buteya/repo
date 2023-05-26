@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static JavaScript</title>
+</head>
+<body>
+    <script type="text/javascript">
+        class ClassWithStaticMethod{
+            static staticProperty = "someValue";
+            static staticMethod(){
+                return "static method has been called";
+            }
+            static {
+                console.log("class static initialization block has been called");
+            }
+        }
+
+        console.log(ClassWithStaticMethod.staticProperty);
+        console.log(ClassWithStaticMethod.staticMethod);
+
+        class ClassWithStatic {
+            static staticField;
+            static staticFieldWithInitializer = value;
+            static staticMethod(){
+                //...
+            }
+        }
+    </script>
+</body>
+</html>
