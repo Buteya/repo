@@ -9,6 +9,7 @@ import './sass/my-sass.scss';
 import {useState,createContext,} from 'react';
 import Timer from './components/Timer.js';
 import ReactContext from './components/ReactContext.js';
+import ReactRef from './components/ReactRef.js';
 
 class Car extends React.Component {
     constructor(props){
@@ -188,6 +189,7 @@ const Component4 = ({user}) => {
     )
 }
 
+
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -221,6 +223,7 @@ const myFirstElement = <div>
     <FavoriteColor />
     <Timer />
     <Component1 />
+    <ReactRef />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
