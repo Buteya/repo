@@ -28,6 +28,31 @@
                 //...
             }
         }
+        class ClassWithStaticField {
+            static statiField;
+            static staticFieldWithInitializer = "static field";
+            static baseStaticField = "base static field";
+            static anotherBaseStaiticField = this.baseStaticField;
+
+            static baseStaticMethod(){
+                return "base static method output";
+            }
+        }
+        class SubClassWithStaticField extends ClassWithStaticField{
+            static subStaticField = "subclass field";
+            static subStaticField =  super.baseStaticMethod();
+        }
+
+        console.log(ClassWithStaticField.anotherBaseStaticField);
+        console.log(SubClassWithStaticField.subStaticField);
+
+
+
+        console.log(Object.hasOwn(ClassWithStaticField,"static field"));
+        console.log(ClassWithStaticField.staticField);
+        console.log(ClassWithStaticField.staticFieldWithInitializer);
+        console.log(SubClassWithStaticField.staticFiledWithInitiailizer);
+        console.log(SubClassWithStaticField.subStaticField);
     </script>
 </body>
 </html>
