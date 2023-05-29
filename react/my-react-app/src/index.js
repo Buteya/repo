@@ -10,6 +10,7 @@ import {useState,createContext,} from 'react';
 import Timer from './components/Timer.js';
 import ReactContext from './components/ReactContext.js';
 import ReactRef from './components/ReactRef.js';
+import DOMReactRef from './components/DOMReactRef.js';
 
 class Car extends React.Component {
     constructor(props){
@@ -224,6 +225,7 @@ const myFirstElement = <div>
     <Timer />
     <Component1 />
     <ReactRef />
+    <DOMReactRef />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
