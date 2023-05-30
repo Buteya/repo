@@ -11,6 +11,7 @@ import Timer from './components/Timer.js';
 import ReactContext from './components/ReactContext.js';
 import ReactRef from './components/ReactRef.js';
 import DOMReactRef from './components/DOMReactRef.js';
+import {useReducer} from 'react';
 
 class Car extends React.Component {
     constructor(props){
@@ -190,6 +191,58 @@ const Component4 = ({user}) => {
     )
 }
 
+const initialTodos = [
+    {
+        id:1,
+        title:"Todo1",
+        complete:false,
+    },
+    {
+        id:2,
+        title:"Todo2",
+        complete:false,
+    }
+];
+
+const reducer = (state,action)=>{
+    switch(action.type){
+        case "COMPLETE":
+            return state.map((todo)=>{
+                if(todo.id === action.id){
+                    return {...todo,complete:!todo.complete};
+                }else{
+                    return todo;
+                }
+            });
+            default:
+                return state;
+    }
+};
+
+const Todo = ()=>{
+    const [todos,dispatch] = useReducer(reducer,initialTodos);
+
+    const handleComplete = (todo)=>{
+        dispatch({type: "COMPLETE",id:todo.id});
+    };
+
+    return(
+        <>
+            {todos.map((todo)=>(
+                <div key={todo.id}>
+                    <label>
+                        <input
+                        type="checkbox"
+                        checked={todo.complete}
+                        onChange={()=>handleComplete(todo)} 
+                        />
+                        {todo.title}
+                    </label>
+                </div>
+            ))}
+        </>
+    )
+}
 
 const myFirstElement = <div>
     <h1>Hello React!</h1>
@@ -226,6 +279,7 @@ const myFirstElement = <div>
     <Component1 />
     <ReactRef />
     <DOMReactRef />
+    <Todo />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
