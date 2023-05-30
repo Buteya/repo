@@ -53,6 +53,35 @@
         console.log(ClassWithStaticField.staticFieldWithInitializer);
         console.log(SubClassWithStaticField.staticFiledWithInitiailizer);
         console.log(SubClassWithStaticField.subStaticField);
+
+        class Tripple {
+            static customName = "Trippler";
+            static description = "I triple any number you provide";
+            static calculate(n = 1){
+                return n * 3;
+            }
+        }
+
+        class SquaredTripple extends Tripple{
+            static longDescription;
+            static description = "I square the triple of any number you provide";
+            static calculate(n){
+                return super.calculate(n) * super.calculate(n);
+            }
+        }
+
+        console.log(Tripple.description);
+        console.log(Tripple.calculate());
+        console.log(Tripple.calculate(6));
+
+        const tp = new Tripple();
+
+        console.log(SquaredTripple.calculate(3));
+        console.log(SquaredTripple.description);
+        console.log(SquaredTripple.longDescription);
+        console.log(SquaredTripple.customName);
+
+        console.log(tp.calculate());
     </script>
 </body>
 </html>
