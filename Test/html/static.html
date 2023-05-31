@@ -82,6 +82,19 @@
         console.log(SquaredTripple.customName);
 
         console.log(tp.calculate());
+
+        class StaticMethodCall {
+            static staticProperty = "static property";
+            static staticMethod(){
+                return `Static method and ${this.staticProperty} has been called`;
+            }
+            static anotherStaticMethod(){
+                return `${this.staticMethod()} from another static method`;
+            }
+        }
+
+        StaticMethodCall.staticMethod();
+        StaticMethodCall.anotherStaticMethod();
     </script>
 </body>
 </html>
