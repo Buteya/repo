@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState,useCallback} from 'react';
 import MyTodos from './MyTodos';
 
 const MyApp = () => {
@@ -8,9 +8,9 @@ const MyApp = () => {
     const increment = () => {
       setCount((c) => c + 1);
     };
-    const addTodo = () => {
+    const addTodo = useCallback(() => {
       setTodos((t) => [...t, "New Todo"]);
-    };
+    },[todos]);
   
     return (
       <>
