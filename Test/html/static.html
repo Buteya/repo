@@ -84,6 +84,12 @@
         console.log(tp.calculate());
 
         class StaticMethodCall {
+            constructor(){
+                console.log(StaticMethodCall.staticProperty);
+                console.log(this.constructor.staticProperty);
+                console.log(StaticMethodCall.staticMethod());
+                console.log(this.constructor.staticMethod());
+            }
             static staticProperty = "static property";
             static staticMethod(){
                 return `Static method and ${this.staticProperty} has been called`;
