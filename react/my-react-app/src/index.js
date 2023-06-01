@@ -12,7 +12,7 @@ import ReactContext from './components/ReactContext.js';
 import ReactRef from './components/ReactRef.js';
 import DOMReactRef from './components/DOMReactRef.js';
 import {useReducer} from 'react';
-
+import MyApp from './components/MyApp.js';
 class Car extends React.Component {
     constructor(props){
         super(props);
@@ -244,6 +244,8 @@ const Todo = ()=>{
     )
 }
 
+
+
 const myFirstElement = <div>
     <h1>Hello React!</h1>
     <table border={1}>
@@ -280,6 +282,7 @@ const myFirstElement = <div>
     <ReactRef />
     <DOMReactRef />
     <Todo />
+    <MyApp />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
