@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Static Initialization Block</title>
+</head>
+<body>
+    <script type="text/javascript">
+        class ClassWithStaticInitializationBlock {
+            static staticProperty1 = 'property 1';
+            static staticProperty2;
+            static {
+                this.staticProperty2 = 'property 2';
+            }
+        }
+        console.log(ClassWithStaticInitializationBlock.staticProperty1);
+        console.log(ClassWithStaticInitializationBlock.staticProperty2);
+    </script>
+</body>
+</html>
