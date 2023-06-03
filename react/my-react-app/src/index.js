@@ -13,6 +13,7 @@ import ReactRef from './components/ReactRef.js';
 import DOMReactRef from './components/DOMReactRef.js';
 import {useReducer} from 'react';
 import MyApp from './components/MyApp.js';
+import Home from './components/Home.js';
 class Car extends React.Component {
     constructor(props){
         super(props);
@@ -283,6 +284,7 @@ const myFirstElement = <div>
     <DOMReactRef />
     <Todo />
     <MyApp />
+    <Home />
 </div>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
