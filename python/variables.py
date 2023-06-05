@@ -24,3 +24,20 @@ x = 'John'
 
 a = 4
 A = 'Sally'
+
+# Legal variable names
+myvar = "John"
+my_var = "John"
+_my_var =  "john"
+myVar = "John"
+MYVAR = "John"
+myvar2 = "John"
+
+# Camel case
+myVariableName = "John"
+
+# Pascal case
+MyVariableName = "John"
+
+# Snake case
+my_variable_name = "John"
