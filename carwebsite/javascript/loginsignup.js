@@ -3,14 +3,23 @@ const signUpBtn = document.getElementById('signup-btn');
 const usernameDiv = document.getElementById('username-div');
 const confirmPasswordDiv = document.getElementById('confirm-password-div');
 const username = document.forms["login-form"]["username"].value;
-const email =  document.getElementById("email").value;
+const email =  document.getElementById("email");
 const password = document.forms["login-form"]["password"].value;
 const confirmPassword = document.forms["login-form"]["confirm-password"].value;
 const cardTitle = document.getElementById("card-title");
-
-
-console.log(email);
+const emailError = document.createElement("p");
+const emailDiv = document.getElementById('email-div');
+const emailArray = [];
 let loggingIn = false;
+
+email.addEventListener('keypress',(event) => {
+    emailError.style.display = 'none';
+    console.log('Key pressed:', event.key);
+    emailArray.push(event.target.value);
+    
+  });
+  
+
 const swithForm = () => {
     console.log(loggingIn)
     if (!loggingIn) {
@@ -34,30 +43,10 @@ const swithForm = () => {
 const validateForm = () => {
  document.getElementById('login-form').addEventListener("click", () => {
           console.log(email.length);
-        if (email.trim().length == 0 || null) {
-            const emailError = document.createElement("p");
+        if (emailArray.length == 0 || null) {
             emailError.innerText = 'Please enter your email';
             emailError.style.color = 'red';
-            const emailDiv = document.getElementById('email-div');
             emailDiv.appendChild(emailError);
-            const emailInput = document.getElementById('email')
-            emailInput.addEventListener("keydown",(event)=>{
-                    event.preventDefault();
-                    console.log(email.value);
-                    emailError.parentNode.removeChild(emailError);
-                    
-            });
-            if(email.trim().length !== 0){
-                console.log(email);
-                emailInput.removeEventListener("keydown",()=>{});
-            }
-            if(email.trim().length === 0){
-                console.log(email);
-                emailDiv.replaceChild(emailError,emailDiv.childNodes[4]);
-            }
-            
-        }else{
-            return;
         }
     })
 
