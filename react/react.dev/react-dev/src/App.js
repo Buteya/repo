@@ -2,6 +2,7 @@ import './App.css';
 import MyButton from './components/MyButton.js';
 import AboutPage from './components/AboutPage.js';
 import Profile from './components/Profile.js';
+import Content from './components/Content.js';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <MyButton />
       <AboutPage/>
       <Profile />
+      <Content />
     </div>
   );
 }
