@@ -52,6 +52,19 @@
                 console.log(super.field);
             }
         }
+
+        let getDPrivateField;
+
+        class D {
+            #privateField;
+            constructor(v){
+                this.#privateField = (d)=>d.#privateField;
+            }
+            static {
+                getDPrivateField = (d) => d.#privatField;
+            }
+        }
+        console.log(getDprivateField(new D("private")));
     </script>
 </body>
 </html>
