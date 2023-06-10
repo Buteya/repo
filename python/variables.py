@@ -82,3 +82,17 @@ print(x + y)
 x = 5 
 y = "John"
 print(x,y)
+
+# Global variables
+
+x = "Awesome"
+def myfunc():
+    global x
+    x = "Fantastic"
+    print("Python is " + x)
+
+myfunc()
+
+print("Pyhton is " + x)
+
+
