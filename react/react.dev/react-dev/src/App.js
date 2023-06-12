@@ -3,6 +3,7 @@ import MyButton from './components/MyButton.js';
 import AboutPage from './components/AboutPage.js';
 import Profile from './components/Profile.js';
 import Content from './components/Content.js';
+import ShoppingList from './components/ShoppingList.js';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <AboutPage/>
       <Profile />
       <Content />
+      <ShoppingList />
     </div>
   );
 }
