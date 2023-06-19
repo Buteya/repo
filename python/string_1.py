@@ -38,3 +38,19 @@ print("expensive" not in txt)
 txt = "The best things in life are free!"
 if "expensive" not in txt:
     print("No, 'expensive' is not present")
+
+# Slicing
+b = "Hello, world!"
+print(b[2:5])
+
+# Slice from the start
+b = "Hello, world!"
+print(b[:5])
+
+# Slice to the end
+b = "Hello, world!"
+print(b[2:])
+
+# Negative indexing
+b = "Hello, world!"
+print(b[-5:-2])
