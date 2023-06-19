@@ -54,3 +54,19 @@ print(b[2:])
 # Negative indexing
 b = "Hello, world!"
 print(b[-5:-2])
+
+# Modify strings
+a = "Hello, world!"
+print(a.upper())
+
+a = "Hello, world!"
+print(a.lower())
+
+a = "Hello, world!"
+print(a.strip())
+
+a = "Hello, world!"
+print(a.replace("H","J"))
+
+a = "Hello, world!"
+print(a.split())
