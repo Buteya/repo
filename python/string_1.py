@@ -70,3 +70,14 @@ print(a.replace("H","J"))
 
 a = "Hello, world!"
 print(a.split())
+
+# string concatination
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c)
