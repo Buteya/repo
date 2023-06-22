@@ -1,7 +1,9 @@
 const express = require('express');
-const routes = require('./routes/api');
 const app = express();
-app.use(routes);
+
+const studentRoute = require('./routes/students.routes');
+app.use('/students',studentRoute);
+
 app.listen(process.env.port || 4000, function(){
     console.log('Now listening for requests on: http://localhost:4000');
 });
