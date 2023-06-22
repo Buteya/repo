@@ -2,17 +2,17 @@ const express =  require('express');
 const routes = express.Router();
 
 //get a list of students from the database
-routes.get('/',(req,res)=>{
+routes.get('/',(req,res,next)=>{
     res.send({type:'Get request'});
 });
 
 //add student to the db
-routes.post('/',(req,res)=>{
+routes.post('/',(req,res,next)=>{
     res.send({type:'Post request'});
 });
 
 //update students in the DB
-routes.put('/:id',(req,res)=>{
+routes.put('/:id',(req,res,next)=>{
     res.send({type:'Update request'});
 });
 
