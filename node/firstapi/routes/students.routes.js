@@ -1,4 +1,5 @@
 const express =  require('express');
+const Student = require('../models/student');
 const routes = express.Router();
 
 //get a list of students from the database
@@ -9,7 +10,7 @@ routes.get('/',(req,res,next)=>{
 //add student to the db
 routes.post('/',async(req,res,next)=>{
     try{
-        const student = new Student(re.body);
+        const student = new Student(res.body);
         const result = await student.save();
         res.send(result)
     } catch(error){
