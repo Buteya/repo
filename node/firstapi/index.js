@@ -9,6 +9,7 @@ const app = express();
 
 app.use(express.json());
 
+app.use('/students',studentRoute);
 //handling 404 error
 app.use((req,res,next)=>{
     const err =  new Error("Not Found");
@@ -27,7 +28,7 @@ app.use((err, req, res, next)=>{
     })
 })
 
-app.use('/students',studentRoute);
+
 
 app.listen(process.env.port || 4000, function(){
     console.log('Now listening for requests on: http://localhost:4000');
