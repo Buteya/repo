@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/students',studentRoute);
+
 //handling 404 error
 app.use((req,res,next)=>{
     const err =  new Error("Not Found");
