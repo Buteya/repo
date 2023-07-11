@@ -91,3 +91,32 @@ thislist = ["apple", "banana", "cherry"]
 thistuple = ("kiwi", "orange")
 thislist.extend(thistuple)
 print(thislist)
+
+#remove specified item
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+#remove specified index
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+#remove the last item
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+#remove specified index
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+#delete the entire list
+thislist = ["apple", "banana", "cherry"]
+del thislist
+
+#clear the list
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
