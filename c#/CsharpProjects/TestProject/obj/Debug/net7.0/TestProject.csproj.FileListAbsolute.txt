@@ -1,0 +1,15 @@
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\bin\Debug\net7.0\TestProject.exe
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\bin\Debug\net7.0\TestProject.deps.json
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\bin\Debug\net7.0\TestProject.runtimeconfig.json
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\bin\Debug\net7.0\TestProject.dll
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\bin\Debug\net7.0\TestProject.pdb
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\TestProject.csproj.AssemblyReference.cache
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\TestProject.AssemblyInfoInputs.cache
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\TestProject.AssemblyInfo.cs
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\TestProject.dll
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\refint\TestProject.dll
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\TestProject.pdb
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\TestProject.genruntimeconfig.cache
+C:\Users\butey\OneDrive\Desktop\IST\c#\CsharpProjects\TestProject\obj\Debug\net7.0\ref\TestProject.dll
