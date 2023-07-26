@@ -92,4 +92,37 @@ thistuple = tuple(y)
 #delete tuple
 thistuple = ("apple", "banana", "cherry")
 del thistuple
-print(thistuple) #this will raise an error because the tuple no longer exists
+#print(thistuple) #this will raise an error because the tuple no longer exists
+
+#unpacking tuples
+#packing a tuple
+fruits = ("apple", "banana", "cherry")
+
+#unpacking a tuple
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+#unpacking and rendering a list for the remaining elements with asterik
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+#using asterik any where
+
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
+
