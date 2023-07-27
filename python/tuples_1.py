@@ -126,3 +126,21 @@ print(green)
 print(tropic)
 print(red)
 
+#loop tuples
+#using for loop
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+
+#looping through the index numbers using range and len
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
+
+#looping using a while loop
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+
