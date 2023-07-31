@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\TestProject.csproj": {}
+    "c:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\TestProject.csproj": {
+    "c:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "c:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "C:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\TestProject.csproj",
+        "projectPath": "c:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\TestProject.csproj",
         "packagesPath": "C:\\Users\\butey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\obj\\",
+        "outputPath": "c:\\Users\\butey\\OneDrive\\Desktop\\IST\\c#\\CsharpProjects\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
