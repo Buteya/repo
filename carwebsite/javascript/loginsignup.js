@@ -37,15 +37,26 @@ const swithForm = () => {
 
 //form validation
 const validateform = () => {
+    let regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     if (loggingIn) {
-        loggingIn = !loggingIn;
+        console.log(loggingIn);
         if (email.value == "") {
             erroremail.innerText = 'Please enter your email';
             erroremail.style.color = 'red';
             emailDiv.appendChild(erroremail);
-            setTimeout(() => {
+            emailDiv.addEventListener('click', () =>{
                 emailDiv.removeChild(erroremail);
-            }, 1000);
+                console.log(email.value);
+            });
+        }
+        else if(email.value != regex){
+            erroremail.innerText = 'Please enter a valid email';
+            erroremail.style.color = 'red';
+            emailDiv.appendChild(erroremail);
+            emailDiv.addEventListener('click', () =>{
+                emailDiv.removeChild(erroremail);
+                console.log(email.value);
+            });
         }
         if (password.value == "") {
             errorpassword.innerText = 'Please enter your password';
@@ -55,40 +66,64 @@ const validateform = () => {
                 passwordDiv.removeChild(errorpassword);
             }, 1000);
         }  
+        loggingIn = !loggingIn;
     }  
     if(!loggingIn) {
-
+        console.log(loggingIn);
         if (username.value == "") {
             errorusername.innerText = 'Please enter your username';
             errorusername.style.color = 'red';
             usernameDiv.appendChild(errorusername);
-            setTimeout(() => {
+            usernameDiv.addEventListener('click',()=>{
                 usernameDiv.removeChild(errorusername);
-            }, 1000);
+                console.log(username.value);
+            });
         }
         if (email.value == "") {
             erroremail.innerText = 'Please enter your email';
             erroremail.style.color = 'red';
             emailDiv.appendChild(erroremail);
-            setTimeout(() => {
+            emailDiv.addEventListener('click',()=>{
                 emailDiv.removeChild(erroremail);
-            }, 1000);
+                console.log(email.value);
+            });
+           
+        }   
+        else if(email.value !== regex){
+            erroremail.innerText = 'Please enter a valid email';
+            erroremail.style.color = 'red';
+            emailDiv.appendChild(erroremail);
+            emailDiv.addEventListener('click',()=>{
+                emailDiv.removeChild(erroremail);
+                console.log(email.value);
+            });
         }
         if (password.value == "") {
             errorpassword.innerText = 'Please enter your password';
             errorpassword.style.color = 'red';
             passwordDiv.appendChild(errorpassword);
-            setTimeout(() => {
+            passwordDiv.addEventListener('click',()=>{
                 passwordDiv.removeChild(errorpassword);
-            }, 1000);
+                console.log(password.value);
+            });
         }
         if (confirmpassword.value == "") {
             errorconfirmpassword.innerText = 'Please enter your confirm password';
             errorconfirmpassword.style.color = 'red';
             confirmPasswordDiv.appendChild(errorconfirmpassword);
-            setTimeout(() => {
+            confirmPasswordDiv.addEventListener('click',()=>{
                 confirmPasswordDiv.removeChild(errorconfirmpassword);
-            }, 1000);
+                console.log(confirmpassword.value);
+            });
+        }
+        else if (confirmpassword.value !== password.value){
+            errorconfirmpassword.innerText = 'passwords dont match';
+            errorconfirmpassword.style.color = 'red';
+            confirmPasswordDiv.appendChild(errorconfirmpassword);
+            confirmPasswordDiv.addEventListener('click',()=>{
+                confirmPasswordDiv.removeChild(errorconfirmpassword);
+                console.log(confirmpassword.value);
+            });
         }
         loggingIn = !loggingIn;
     }
