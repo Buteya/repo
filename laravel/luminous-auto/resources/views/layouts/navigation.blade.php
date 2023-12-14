@@ -15,34 +15,44 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" style="text-decoration:none !important">
                         {{ __('Home') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('orderlist.index')" :active="request()->routeIs('orderlist.index')" style="text-decoration:none !important">
+                        {{ __('Orders') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')" style="text-decoration:none !important">
+                        {{ __('About Us') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     @canany(['create-role', 'edit-role', 'delete-role'])
-                    <x-nav-link :href="route('roles.index')" :active="request()->routeIs('roles.index')">
+                    <x-nav-link :href="route('roles.index')" :active="request()->routeIs('roles.index')" style="text-decoration:none !important">
                         {{ __('Mange Roles') }}
                     </x-nav-link>
                     @endcanany
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     @canany(['create-user', 'edit-user', 'delete-user'])
-                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')" style="text-decoration:none !important">
                         {{ __('Mange Users') }}
                     </x-nav-link>
                     @endcanany
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     @canany(['create-product', 'edit-product', 'delete-product'])
-                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')">
+                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')" style="text-decoration:none !important">
                         {{ __('Mange Products') }}
                     </x-nav-link>
                     @endcanany
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     @canany(['create-order', 'edit-order', 'delete-order'])
-                    <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.index')">
+                    <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.index')" style="text-decoration:none !important">
                         {{ __('Mange Orders') }}
                     </x-nav-link>
                     @endcanany
@@ -65,7 +75,7 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link :href="route('profile.edit')" style="text-decoration:none !important">
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
@@ -75,7 +85,7 @@
 
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                                this.closest('form').submit();" style="text-decoration:none !important">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>

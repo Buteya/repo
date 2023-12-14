@@ -25,7 +25,20 @@
   </ul>
   <div class="card-body">
     <a href="{{ route('dashboardview', $product->id) }}" class="btn btn-outline-primary">View</a>
-    <a href="#" class="btn btn-primary" style="float:right">Buy</a>
+    <form method="POST" action="{{ route('orderlist.store') }}"  style="float:right">
+    @csrf 
+    <textarea
+                name="message"
+                placeholder="{{ __('What\'s on your mind?') }}"
+                class="hidden block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+            >pending</textarea>
+            <textarea
+                name="product_id"
+                placeholder="{{ __('What\'s on your mind?') }}"
+                class="hidden block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+            >{{$product->id}}</textarea>
+    <x-primary-button style="background-color: blue !important;border:1px solid blue !important;">Buy</x-primary-button>
+  </form>
   </div>
 </div>
 @endforeach
